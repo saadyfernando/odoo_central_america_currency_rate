@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="base.USD" model="res.currency">
+        <field name="active" eval="True"/>
+    </record>
+    <record id="base.GTQ" model="res.currency">
+        <field name="active" eval="True"/>
+    </record>
+    <record id="base.HNL" model="res.currency">
+        <field name="active" eval="True"/>
+    </record>
+    <record id="base.NIO" model="res.currency">
+        <field name="active" eval="True"/>
+    </record>
+    <record id="base.CRC" model="res.currency">
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="api_update_currency_rate_setting" model="ir.ui.view">
+        <field name="name">Update Currency Rate</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='main_currency_setting_container']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" id="currencies_rates">
+                    <div class=" o_setting_left_pane"/>
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label mt16">Actualización de Tasas de Cambio</span>
+                        <div class="text-muted">
+                           Configure the currencies that will be updated their exchange rates automatically.
+                            <br/>
+                        </div>
+                        <label for="currencies_ids"/>
+                        <div class="content-group">
+                            <field name="currencies_ids" style="width: 100%" widget="many2many_tags"/>
+                        </div>
+                        <div class="text-muted">
+                           Configure su API Key proporcionada por webs.hn
+                            <br/>
+                        </div>
+                        <label for="api_url" style="width: 100%;display:none;" />
+                        <div class="content-group">
+                            <field name="api_url" style="width: 100%;display:none;" force_save="True"/>
+                        </div>
+                        <label for="api_key"/>
+                        <div class="content-group">
+                            <field name="api_key" style="width: 100%"/>
+                        </div>
+                        <div class="text-muted">
+                          Obtenga una APIKEY visitando:
+                            <br/>
+                        </div>
+                        <div class="content-group">
+                            <field name="api_request_web" widget="url" options="{'website_path': True}"
+                                   style="width: 100%" force_save="True"/>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
